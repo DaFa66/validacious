@@ -77,7 +77,7 @@ class Form_helper_tester extends Trongate {
     $results['form_close'] = $this->check_html_contains($html, '</form>');
 
     // Test form_label
-    $html = form_label('Test Label', 'test_id', ['class' => 'label_class']);
+    $html = form_label('Test Label', ['for' => 'test_id', 'class' => 'label_class']);
     $results['form_label'] = $this->check_html_contains($html, '<label', 'for="test_id"', 'class="label_class"', '>Test Label</label>');
 
     // Test form_textarea
