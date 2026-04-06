@@ -7,10 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Helper Testers Overview</title>
   <link rel="stylesheet" href="css/trongate.css">
+  <link rel="stylesheet" href="helper_testers_module/css/custom.css">
+  <script src="helper_testers_module/js/custom.js"></script>
 </head>
 
 <body>
   <div class="container">
+    <div class="toggle-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
     <div class="text-center">
       <h1>Helper Testers Overview</h1>
       <p>Comprehensive testing suite for all Trongate helper functions</p>
@@ -36,51 +44,51 @@
       <div class="card-body">
         <p>This testing suite runs rigorous per-attribute assertions across all core helper functions to map regressions against the defined framework behaviour.</p>
         
-        <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+        <table>
           <thead>
-            <tr style="background: #f8f9fa; text-align: left; border-bottom: 2px solid #ddd;">
-              <th style="padding: 8px;">Target Module</th>
-              <th style="padding: 8px; text-align: center;">Active Asserts</th>
-              <th style="padding: 8px; text-align: center;">Skipped</th>
-              <th style="padding: 8px; text-align: center;">Total Validations</th>
+            <tr>
+              <th class="text-left">Target Module</th>
+              <th class="text-center">Active Asserts</th>
+              <th class="text-center">Skipped</th>
+              <th class="text-center">Total Validations</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom: 1px solid #eee;">
-              <td style="padding: 6px;">String Helper</td>
-              <td style="padding: 6px; text-align: center;">93</td>
-              <td style="padding: 6px; text-align: center;">0</td>
-              <td style="padding: 6px; text-align: center; font-weight: bold;">93</td>
+            <tr>
+              <td>String Helper</td>
+              <td class="text-center">93</td>
+              <td class="text-center">0</td>
+              <td class="text-center" style="font-weight: bold;">93</td>
             </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-              <td style="padding: 6px;">Flashdata Helper</td>
-              <td style="padding: 6px; text-align: center;">13</td>
-              <td style="padding: 6px; text-align: center;">0</td>
-              <td style="padding: 6px; text-align: center; font-weight: bold;">13</td>
+            <tr>
+              <td>Flashdata Helper</td>
+              <td class="text-center">13</td>
+              <td class="text-center">0</td>
+              <td class="text-center" style="font-weight: bold;">13</td>
             </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-              <td style="padding: 6px;">Form Helper</td>
-              <td style="padding: 6px; text-align: center;">113</td>
-              <td style="padding: 6px; text-align: center;">5</td>
-              <td style="padding: 6px; text-align: center; font-weight: bold;">118</td>
+            <tr>
+              <td>Form Helper</td>
+              <td class="text-center">113</td>
+              <td class="text-center">5</td>
+              <td class="text-center" style="font-weight: bold;">118</td>
             </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-              <td style="padding: 6px;">URL Helper</td>
-              <td style="padding: 6px; text-align: center;">33</td>
-              <td style="padding: 6px; text-align: center;">3</td>
-              <td style="padding: 6px; text-align: center; font-weight: bold;">36</td>
+            <tr>
+              <td>URL Helper</td>
+              <td class="text-center">33</td>
+              <td class="text-center">3</td>
+              <td class="text-center" style="font-weight: bold;">36</td>
             </tr>
-            <tr style="border-bottom: 1px solid #eee;">
-              <td style="padding: 6px;">Utilities Helper</td>
-              <td style="padding: 6px; text-align: center;">20</td>
-              <td style="padding: 6px; text-align: center;">4</td>
-              <td style="padding: 6px; text-align: center; font-weight: bold;">24</td>
+            <tr>
+              <td>Utilities Helper</td>
+              <td class="text-center">20</td>
+              <td class="text-center">4</td>
+              <td class="text-center" style="font-weight: bold;">24</td>
             </tr>
-            <tr style="background: #e9ecef; font-weight: bold;">
-              <td style="padding: 8px;">Total Operations</td>
-              <td style="padding: 8px; text-align: center; color: #28a745;">272</td>
-              <td style="padding: 8px; text-align: center; color: #6c757d;">12</td>
-              <td style="padding: 8px; text-align: center;">284</td>
+            <tr style="font-weight: bold;">
+              <td>Total Operations</td>
+              <td class="text-center" style="color: #28a745;">272</td>
+              <td class="text-center" style="color: #6c757d;">12</td>
+              <td class="text-center">284</td>
             </tr>
           </tbody>
         </table>

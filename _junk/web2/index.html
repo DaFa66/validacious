@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Stapler</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+ <body class="light">
+    <div class="container">
+        <div class="toggle-container">
+            <label class="toggle-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <h1>Welcome</h1>
+        <p class="subtitle">How to switch Dark mode in CSS</p>
+        <button class="cta-button">Button</button>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Lorem</div>
+                <div class="feature-desc">Amet consectetur adipisicing elit nisi</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Saepe</div>
+                <div class="feature-desc">Ipsam quod ipsum natus in quos tempora dicta</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">Architecto</div>
+                <div class="feature-desc">Laboriosam labore placeat sapiente totam vero </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+ 
+        const toggle = document.getElementById('darkModeToggle');
+        const savedColorScheme = localStorage.getItem('color-scheme');
+
+        if(savedColorScheme === 'dark') {
+            toggle.checked = true;
+            document.documentElement.style.colorScheme = 'dark';
+        }
+        else 
+            document.documentElement.style.colorScheme = 'light';
+
+        toggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.documentElement.style.colorScheme = 'dark';
+                localStorage.setItem('color-scheme','dark');
+            } else {
+                document.documentElement.style.colorScheme = 'light';
+                localStorage.setItem('color-scheme','light');
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

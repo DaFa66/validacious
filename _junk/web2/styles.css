@@ -1,0 +1,166 @@
+:root {
+
+    color-scheme: light dark;
+    --bg-gradient-start: light-dark(#667eea, #1a1a2e);
+    --bg-gradient-end: light-dark(#f32f6a,#16213e);
+    --text-color: light-dark(#ffffff,#e4e4e4);
+    --card-bg: light-dark(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.05));
+    --card-border: light-dark(transparent,rgba(255, 255, 255, 0.1));
+    --toggle-bg: light-dark(rgba(255, 255, 255, 0.3),rgba(65, 65, 65, 0.6));
+    --button-bg: light-dark(white, #667eea);
+    --button-text: light-dark(#667eea,white);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+}
+
+.toggle-container {
+    position: absolute;
+    top: -60px;
+    right: 0;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 70px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    width:70px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-bg);
+    border-radius: 30px;
+    transition: 0.4s;
+    backdrop-filter: blur(10px);
+}
+
+.slider:before {
+    position: absolute;
+    content: "☀️";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+input:checked + .slider {
+    background-color: var(--toggle-bg);
+}
+
+input:checked + .slider:before {
+    transform: translateX(40px);
+    content: "🌙";
+    background-color: #2d2d2d;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 20px var(--shadow-color);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    background: var(--button-bg);
+    color: var(--button-text);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px var(--shadow-color);
+}
+
+.features {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}

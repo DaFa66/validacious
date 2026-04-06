@@ -7,71 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flashdata Helper Tester - Test Results</title>
   <link rel="stylesheet" href="css/trongate.css">
-  <style>
-    .test-group { margin: 1.5em 0; }
-    .test-group-heading {
-      font-weight: bold;
-      font-size: 1.05em;
-      padding: 0.5em 0.75em;
-      background: #f0f0f0;
-      border-left: 4px solid #888;
-      margin-bottom: 0.25em;
-    }
-    .test-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0.35em 0.75em;
-      border-bottom: 1px solid #eee;
-      font-size: 0.92em;
-      gap: 1em;
-    }
-    .test-row.pass { border-left: 3px solid #28a745; }
-    .test-row.fail { border-left: 3px solid #dc3545; background: #fff5f5; }
-    .test-label { flex: 2; color: #333; }
-    .test-expected, .test-actual { flex: 2; font-family: monospace; font-size: 0.88em; word-break: break-all; }
-    .test-expected { color: #555; }
-    .test-actual.pass { color: #155724; }
-    .test-actual.fail { color: #721c24; }
-    .badge {
-      flex: 0 0 5em;
-      text-align: center;
-      font-size: 0.82em;
-      font-weight: bold;
-      padding: 0.15em 0.5em;
-      border-radius: 3px;
-    }
-    .badge.pass { background: #d4edda; color: #155724; }
-    .badge.fail { background: #f8d7da; color: #721c24; }
-    .col-header {
-      display: flex;
-      gap: 1em;
-      padding: 0.25em 0.75em;
-      font-size: 0.78em;
-      color: #555;
-      font-weight: 600;
-      border-bottom: 2px solid #ccc;
-      background: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .col-header span:first-child { flex: 2; }
-    .col-header span:nth-child(2), .col-header span:nth-child(3) { flex: 2; }
-    .col-header span:last-child { flex: 0 0 5em; text-align: center; }
-    .summary-bar {
-      padding: 0.75em 1em;
-      font-weight: bold;
-      border-radius: 4px;
-      flex: 1;
-    }
-    .summary-bar.all-pass { background: #d4edda; color: #155724; }
-    .summary-bar.has-fail  { background: #f8d7da; color: #721c24; }
-  </style>
+  <link rel="stylesheet" href="helper_testers_module/css/custom.css">
+  <script src="helper_testers_module/js/custom.js"></script>
 </head>
 
 <body>
   <div class="container">
+    <div class="toggle-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
     <div class="card">
       <div class="card-heading">Flashdata Helper Unit Tests</div>
       <div class="card-body">

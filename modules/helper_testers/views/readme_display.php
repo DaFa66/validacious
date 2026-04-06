@@ -7,10 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>README - <?= $module_name ?> Tester</title>
   <link rel="stylesheet" href="css/trongate.css">
+  <link rel="stylesheet" href="helper_testers_module/css/custom.css">
+  <script src="helper_testers_module/js/custom.js"></script>
 </head>
 
 <body>
   <div class="container">
+    <div class="toggle-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
     <?= anchor('helper_testers', '&larr; Back to Helper Testers Overview', ['class' => 'button alt mb-1']); ?>
 
     <div class="card">
